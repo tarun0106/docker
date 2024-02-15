@@ -9,6 +9,6 @@ RUN npm install
 # Copy app source code to /app
 COPY . /app/
 # Expose port 8000
-EXPOSE 8000
+EXPOSE 9000
 # Run app.js as entrypoint
 CMD ["node", "app.js"]
