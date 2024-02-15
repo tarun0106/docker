@@ -19,7 +19,7 @@ pipeline {
         stage ('Login & Push Image') {
             steps {
                 echo 'Logging in to docker hub and pushing image'
-                withCredentials([usernamePassword('credentialsId':'dockerhub', passwordVariable: 'Tarun@1994', usernameVariable: 'tarunkumar01694')]){
+                withCredentials([usernamePassword('credentialsId':'dockerhub', passwordVariable: 'Tarun@1994', usernameVariable: 'tarunkumar01694@gmail.com')]){
                     sh "docker login -u ${env.dockerHubUser} -p ${env.dockerHubPassword}"
                     sh "docker image push ajitfawade14/node-todo-app:latest"
                 }
